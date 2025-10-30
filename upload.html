@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bilder hochladen · Stammtisch Hüttenpfeife</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <div class="logo">Stammtisch Hüttenpfeife</div>
+          <p class="tagline">Gemeinschaft, Tradition und gute Gespräche in den Bergen</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a class="active" href="upload.html">Bilder hochladen</a></li>
+            <li><a href="kalender.html">Event-Kalender</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="card">
+          <h1>Bildergalerie</h1>
+          <p>
+            Teile deine schönsten Momente vom Stammtisch Hüttenpfeife. Ziehe deine Fotos
+            einfach in das Feld oder wähle sie klassisch über den Dateidialog aus. Die
+            Bilder werden nur lokal in deinem Browser angezeigt.
+          </p>
+
+          <div id="upload-area" class="upload-area" role="button" aria-label="Bilder hochladen">
+            <p><strong>Fotos hierhin ziehen</strong> oder anklicken, um Dateien auszuwählen.</p>
+            <button id="upload-button" class="button" type="button">Dateien auswählen</button>
+            <input id="file-input" type="file" accept="image/*" multiple hidden />
+          </div>
+
+          <label for="caption">Bildbeschreibung (optional)</label>
+          <input id="caption" type="text" placeholder="z. B. Hüttenabend im März" />
+
+          <div class="preview-grid" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h3>Stammtisch Hüttenpfeife</h3>
+          <p>Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber.</p>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <p>E-Mail: <a href="mailto:hallo@huettenpfeife.de">hallo@huettenpfeife.de</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/upload.js" type="module"></script>
+  </body>
+</html>

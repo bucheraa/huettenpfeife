@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event-Kalender · Stammtisch Hüttenpfeife</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <div class="logo">Stammtisch Hüttenpfeife</div>
+          <p class="tagline">Gemeinschaft, Tradition und gute Gespräche in den Bergen</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="upload.html">Bilder hochladen</a></li>
+            <li><a class="active" href="kalender.html">Event-Kalender</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container" style="display: grid; gap: 2rem;">
+        <section class="card">
+          <div class="calendar-controls">
+            <button id="prev-month" class="button" type="button">◀︎</button>
+            <h1 id="month-label" style="margin: 0; text-transform: capitalize;"></h1>
+            <button id="next-month" class="button" type="button">▶︎</button>
+          </div>
+          <div class="calendar-grid" role="grid" aria-live="polite"></div>
+          <div class="card" style="margin-top: 2rem; background: rgba(240, 234, 210, 0.6);">
+            <h2>Events an diesem Tag</h2>
+            <div class="event-list" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Neuen Termin eintragen</h2>
+          <p>Füge dem Stammtisch-Kalender deine eigenen Ideen hinzu.</p>
+          <form id="event-form">
+            <label for="title">Titel *</label>
+            <input id="title" name="title" type="text" required placeholder="z. B. Herbstwanderung" />
+
+            <label for="date">Datum *</label>
+            <input id="date" name="date" type="date" required />
+
+            <label for="time">Uhrzeit</label>
+            <input id="time" name="time" type="time" />
+
+            <label for="location">Ort</label>
+            <input id="location" name="location" type="text" placeholder="Treffpunkt" />
+
+            <label for="description">Beschreibung</label>
+            <textarea id="description" name="description" rows="3" placeholder="Was erwartet uns?"></textarea>
+
+            <button class="button" type="submit">Termin speichern</button>
+          </form>
+          <p style="font-size: 0.9rem; color: rgba(47, 62, 70, 0.7); margin-top: 1rem;">
+            Hinweis: Neue Termine werden im lokalen Speicher deines Browsers abgelegt und
+            erscheinen sofort auch auf der Startseite.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h3>Stammtisch Hüttenpfeife</h3>
+          <p>Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber.</p>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <p>E-Mail: <a href="mailto:hallo@huettenpfeife.de">hallo@huettenpfeife.de</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/calendar.js"></script>
+  </body>
+</html>
