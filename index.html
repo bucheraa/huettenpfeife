@@ -4,6 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Stammtisch Hüttenpfeife</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -15,15 +28,18 @@
         </div>
         <nav>
           <ul>
-            <li><a class="active" href="index.html">Startseite</a></li>
-            <li><a href="upload.html">Bilder hochladen</a></li>
-            <li><a href="kalender.html">Event-Kalender</a></li>
+            <li><a class="active" href="#start">Startseite</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#impressionen">Impressionen</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
+            <li><a href="upload.html">Uploads</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="start">
       <div class="container">
         <section class="hero">
           <div class="hero-text">
@@ -33,6 +49,10 @@
               sich regelmäßig in gemütlicher Hütten-Atmosphäre trifft. Entdecke
               unsere nächsten Termine und sei beim nächsten Mal mit dabei.
             </p>
+            <div class="hero-actions">
+              <a class="button" href="#mitglied-werden">Jetzt mitmachen</a>
+              <a class="button button-secondary" href="kalender.html">Alle Termine</a>
+            </div>
           </div>
           <div class="card">
             <h2>Nächste Termine</h2>
@@ -43,7 +63,7 @@
           </div>
         </section>
 
-        <section class="card" style="margin-top: 3rem;">
+        <section id="ueber-uns" class="card focus-card">
           <h2>Wer wir sind</h2>
           <p>
             Seit über zehn Jahren pflegen wir die Tradition des Stammtischs
@@ -51,8 +71,161 @@
             oder spannender Themenabend – bei uns steht das gemeinsame Erlebnis im
             Vordergrund. Neue Gesichter sind jederzeit herzlich willkommen!
           </p>
+          <div class="stats-grid" aria-label="Stammtisch in Zahlen">
+            <div>
+              <span class="stat-number">180+</span>
+              <span class="stat-label">aktive Mitglieder</span>
+            </div>
+            <div>
+              <span class="stat-number">36</span>
+              <span class="stat-label">Events pro Jahr</span>
+            </div>
+            <div>
+              <span class="stat-number">12</span>
+              <span class="stat-label">Wanderregionen</span>
+            </div>
+          </div>
         </section>
       </div>
+
+      <section id="highlights" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Unsere Idee</p>
+            <h2>Was den Stammtisch besonders macht</h2>
+            <p class="section-lead">
+              Bei uns bekommst du mehr als nur ein Getränk am Tresen. Wir schaffen
+              unvergessliche Erlebnisse und sorgen für eine lebendige Gemeinschaft.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🏔️</div>
+              <h3>Erlebnisse in der Natur</h3>
+              <p>
+                Regelmäßige Wanderungen, Sonnenaufgangstouren und Hüttenausflüge führen uns
+                zu den schönsten Plätzen der Alpenregion.
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🎶</div>
+              <h3>Hüttenabende mit Stimmung</h3>
+              <p>
+                Von Musikabenden bis zu Themenstammtischen – in gemütlicher Runde ist immer
+                Platz für neue Ideen und spannende Gespräche.
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🤝</div>
+              <h3>Herzliche Gemeinschaft</h3>
+              <p>
+                Wir begrüßen jedes neue Mitglied mit offenen Armen und unterstützen uns
+                gegenseitig – auf Touren und im Alltag.
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">📷</div>
+              <h3>Gemeinsame Erinnerungen</h3>
+              <p>
+                In unserer Galerie sammeln wir Highlights der vergangenen Jahre und halten
+                besondere Momente fest.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="impressionen" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Eindrücke</p>
+            <h2>Momente, die in Erinnerung bleiben</h2>
+            <p class="section-lead">
+              Ein Blick in unsere Galerie zeigt, wie vielfältig und herzlich unsere Treffen
+              sind. Teile deine Schnappschüsse mit uns über die Upload-Seite.
+            </p>
+          </div>
+          <div class="masonry">
+            <figure class="masonry-item">
+              <div class="masonry-photo" role="img" aria-label="Gruppe beim Sonnenaufgang in den Bergen"></div>
+              <figcaption>Sonnenaufgangstour mit Gipfelfrühstück</figcaption>
+            </figure>
+            <figure class="masonry-item">
+              <div class="masonry-photo" role="img" aria-label="Gemütlicher Hüttenabend"></div>
+              <figcaption>Hüttenabend mit Live-Musik</figcaption>
+            </figure>
+            <figure class="masonry-item">
+              <div class="masonry-photo" role="img" aria-label="Wandergruppe im Wald"></div>
+              <figcaption>Kräuterwanderung im Frühsommer</figcaption>
+            </figure>
+            <figure class="masonry-item">
+              <div class="masonry-photo" role="img" aria-label="Freunde stoßen an"></div>
+              <figcaption>Feierabend auf der Hüttenterrasse</figcaption>
+            </figure>
+          </div>
+          <div class="section-cta">
+            <a class="button" href="upload.html">Jetzt eigenes Foto hochladen</a>
+            <a class="link" href="upload.html#galerie">Zur gesamten Galerie</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container timeline">
+          <div class="timeline-info">
+            <p class="eyebrow">Rückblick</p>
+            <h2>Die Highlights der letzten Monate</h2>
+            <p>
+              Jeden Monat passiert etwas Neues bei uns. Von kulinarischen Abenden über
+              Workshops bis hin zu spontanen Wanderungen – so bleibst du auf dem Laufenden.
+            </p>
+          </div>
+          <ol class="timeline-list">
+            <li>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div>
+                <h3>April · Frühlingswanderung zum Seebergkopf</h3>
+                <p>Über 40 Teilnehmende genossen den ersten warmen Abend mit Lagerfeuer.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div>
+                <h3>März · Workshop "Sicher unterwegs im Gebirge"</h3>
+                <p>Unser Mitglied Jana zeigte hilfreiche Techniken für alpine Touren.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div>
+                <h3>Februar · Fondue-Abend in der Winterhütte</h3>
+                <p>Gemütliches Beisammensein mit regionalen Spezialitäten und Live-Musik.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="mitglied-werden" class="section section-cta">
+        <div class="container join-card">
+          <div>
+            <p class="eyebrow">Mach mit</p>
+            <h2>Du möchtest dabei sein?</h2>
+            <p>
+              Trag dich in unsere Interessentenliste ein und erhalte die wichtigsten Infos
+              zu kommenden Terminen und Aktionen direkt in dein Postfach.
+            </p>
+          </div>
+          <form class="join-form">
+            <label for="join-name">Name</label>
+            <input id="join-name" name="name" type="text" placeholder="Max Mustermann" required />
+            <label for="join-email">E-Mail-Adresse</label>
+            <input id="join-email" name="email" type="email" placeholder="du@beispiel.de" required />
+            <button class="button" type="submit">Interesse bekunden</button>
+            <p class="form-hint">Wir melden uns innerhalb weniger Tage mit allen Details.</p>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -68,6 +241,25 @@
           <h3>Kontakt</h3>
           <p>E-Mail: <a href="mailto:hallo@huettenpfeife.de">hallo@huettenpfeife.de</a></p>
           <p>Instagram: <a href="https://instagram.com/huettenpfeife">@huettenpfeife</a></p>
+          <p>Telefon: <a href="tel:+498912345678">+49 89 123 456 78</a></p>
+        </div>
+        <div>
+          <h3>Bleib in Kontakt</h3>
+          <p>
+            Folge uns auf den sozialen Kanälen für aktuelle Impressionen und
+            Geschichten rund um den Stammtisch.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/huettenpfeife" aria-label="Instagram">
+              <span>IG</span>
+            </a>
+            <a href="https://facebook.com/huettenpfeife" aria-label="Facebook">
+              <span>FB</span>
+            </a>
+            <a href="https://youtube.com/huettenpfeife" aria-label="YouTube">
+              <span>YT</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

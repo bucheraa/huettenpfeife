@@ -33,6 +33,34 @@ function renderUpcomingEvents() {
   });
 }
 
+function setupJoinForm() {
+  const form = document.querySelector('.join-form');
+  if (!form) return;
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const name = formData.get('name');
+
+    form.reset();
+
+    const message = document.createElement('p');
+    message.className = 'success-message';
+    message.textContent = name
+      ? `${name}, vielen Dank für dein Interesse! Wir melden uns in Kürze.`
+      : 'Vielen Dank für dein Interesse! Wir melden uns in Kürze.';
+
+    const existingMessage = form.parentElement?.querySelector('.success-message');
+    if (existingMessage) {
+      existingMessage.replaceWith(message);
+    } else {
+      form.insertAdjacentElement('afterend', message);
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderUpcomingEvents();
+  setupJoinForm();
 });

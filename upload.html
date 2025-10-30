@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bilder hochladen · Stammtisch Hüttenpfeife</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -15,9 +21,12 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a class="active" href="upload.html">Bilder hochladen</a></li>
-            <li><a href="kalender.html">Event-Kalender</a></li>
+            <li><a href="index.html#start">Startseite</a></li>
+            <li><a href="index.html#ueber-uns">Über uns</a></li>
+            <li><a href="index.html#highlights">Highlights</a></li>
+            <li><a href="index.html#impressionen">Impressionen</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
+            <li><a class="active" href="upload.html">Uploads</a></li>
           </ul>
         </nav>
       </div>
@@ -25,13 +34,31 @@
 
     <main>
       <div class="container">
-        <section class="card">
-          <h1>Bildergalerie</h1>
+        <section class="card intro-card">
+          <p class="eyebrow">Galerie</p>
+          <h1>Bilder teilen und Erinnerungen bewahren</h1>
           <p>
-            Teile deine schönsten Momente vom Stammtisch Hüttenpfeife. Ziehe deine Fotos
-            einfach in das Feld oder wähle sie klassisch über den Dateidialog aus. Die
-            Bilder werden nur lokal in deinem Browser angezeigt.
+            Teile deine schönsten Momente vom Stammtisch Hüttenpfeife. Die Upload-Funktion läuft
+            komplett lokal in deinem Browser – so bleiben deine Bilder in deiner Kontrolle.
           </p>
+        </section>
+
+        <section id="galerie" class="card">
+          <div class="upload-guidelines">
+            <div>
+              <h2>Schneller Upload</h2>
+              <p>
+                Ziehe deine Fotos einfach in das Feld oder wähle sie klassisch über den
+                Dateidialog aus. Füge eine optionale Bildbeschreibung hinzu, damit alle wissen,
+                was auf dem Foto zu sehen ist.
+              </p>
+            </div>
+            <ul>
+              <li>Unterstützt JPG, PNG und WebP</li>
+              <li>Bis zu 10 Bilder gleichzeitig auswählen</li>
+              <li>Bilder verlassen deinen Browser nicht</li>
+            </ul>
+          </div>
 
           <div id="upload-area" class="upload-area" role="button" aria-label="Bilder hochladen">
             <p><strong>Fotos hierhin ziehen</strong> oder anklicken, um Dateien auszuwählen.</p>
@@ -42,6 +69,8 @@
           <label for="caption">Bildbeschreibung (optional)</label>
           <input id="caption" type="text" placeholder="z. B. Hüttenabend im März" />
 
+          <p class="form-hint upload-feedback" aria-live="polite"></p>
+
           <div class="preview-grid" aria-live="polite"></div>
         </section>
       </div>
@@ -51,11 +80,28 @@
       <div class="container footer-grid">
         <div>
           <h3>Stammtisch Hüttenpfeife</h3>
-          <p>Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber.</p>
+          <p>
+            Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber. Wir freuen
+            uns auf deinen Besuch!
+          </p>
         </div>
         <div>
           <h3>Kontakt</h3>
           <p>E-Mail: <a href="mailto:hallo@huettenpfeife.de">hallo@huettenpfeife.de</a></p>
+          <p>Instagram: <a href="https://instagram.com/huettenpfeife">@huettenpfeife</a></p>
+          <p>Telefon: <a href="tel:+498912345678">+49 89 123 456 78</a></p>
+        </div>
+        <div>
+          <h3>Bleib in Kontakt</h3>
+          <p>
+            Folge uns auf den sozialen Kanälen für aktuelle Impressionen und Geschichten rund um
+            den Stammtisch.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/huettenpfeife" aria-label="Instagram"><span>IG</span></a>
+            <a href="https://facebook.com/huettenpfeife" aria-label="Facebook"><span>FB</span></a>
+            <a href="https://youtube.com/huettenpfeife" aria-label="YouTube"><span>YT</span></a>
+          </div>
         </div>
       </div>
     </footer>
