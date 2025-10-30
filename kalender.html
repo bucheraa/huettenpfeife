@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Event-Kalender · Stammtisch Hüttenpfeife</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -15,55 +21,71 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="upload.html">Bilder hochladen</a></li>
-            <li><a class="active" href="kalender.html">Event-Kalender</a></li>
+            <li><a href="index.html#start">Startseite</a></li>
+            <li><a href="index.html#ueber-uns">Über uns</a></li>
+            <li><a href="index.html#highlights">Highlights</a></li>
+            <li><a href="index.html#impressionen">Impressionen</a></li>
+            <li><a class="active" href="kalender.html">Kalender</a></li>
+            <li><a href="upload.html">Uploads</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="container" style="display: grid; gap: 2rem;">
-        <section class="card">
-          <div class="calendar-controls">
-            <button id="prev-month" class="button" type="button">◀︎</button>
-            <h1 id="month-label" style="margin: 0; text-transform: capitalize;"></h1>
-            <button id="next-month" class="button" type="button">▶︎</button>
-          </div>
-          <div class="calendar-grid" role="grid" aria-live="polite"></div>
-          <div class="card" style="margin-top: 2rem; background: rgba(240, 234, 210, 0.6);">
-            <h2>Events an diesem Tag</h2>
-            <div class="event-list" aria-live="polite"></div>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Neuen Termin eintragen</h2>
-          <p>Füge dem Stammtisch-Kalender deine eigenen Ideen hinzu.</p>
-          <form id="event-form">
-            <label for="title">Titel *</label>
-            <input id="title" name="title" type="text" required placeholder="z. B. Herbstwanderung" />
-
-            <label for="date">Datum *</label>
-            <input id="date" name="date" type="date" required />
-
-            <label for="time">Uhrzeit</label>
-            <input id="time" name="time" type="time" />
-
-            <label for="location">Ort</label>
-            <input id="location" name="location" type="text" placeholder="Treffpunkt" />
-
-            <label for="description">Beschreibung</label>
-            <textarea id="description" name="description" rows="3" placeholder="Was erwartet uns?"></textarea>
-
-            <button class="button" type="submit">Termin speichern</button>
-          </form>
-          <p style="font-size: 0.9rem; color: rgba(47, 62, 70, 0.7); margin-top: 1rem;">
-            Hinweis: Neue Termine werden im lokalen Speicher deines Browsers abgelegt und
-            erscheinen sofort auch auf der Startseite.
+      <div class="container">
+        <section class="card intro-card">
+          <p class="eyebrow">Planung</p>
+          <h1>Alle Termine auf einen Blick</h1>
+          <p>
+            Nutze den interaktiven Kalender, um kommende Aktivitäten zu entdecken oder direkt
+            neue Ideen einzutragen. Deine Einträge werden lokal gespeichert und erscheinen
+            automatisch auch auf der Startseite.
           </p>
         </section>
+
+        <div class="calendar-layout">
+          <section class="card">
+            <div class="calendar-controls">
+              <button id="prev-month" class="button" type="button" aria-label="Vorheriger Monat">◀︎</button>
+              <h2 id="month-label" class="calendar-title" aria-live="polite"></h2>
+              <button id="next-month" class="button" type="button" aria-label="Nächster Monat">▶︎</button>
+            </div>
+            <div class="calendar-grid" role="grid" aria-live="polite"></div>
+            <div class="card day-events">
+              <h3>Events an diesem Tag</h3>
+              <div class="event-list" aria-live="polite"></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <p class="eyebrow">Mitgestalten</p>
+            <h2>Neuen Termin eintragen</h2>
+            <p>Füge dem Stammtisch-Kalender deine eigenen Ideen hinzu.</p>
+            <form id="event-form">
+              <label for="title">Titel *</label>
+              <input id="title" name="title" type="text" required placeholder="z. B. Herbstwanderung" />
+
+              <label for="date">Datum *</label>
+              <input id="date" name="date" type="date" required />
+
+              <label for="time">Uhrzeit</label>
+              <input id="time" name="time" type="time" />
+
+              <label for="location">Ort</label>
+              <input id="location" name="location" type="text" placeholder="Treffpunkt" />
+
+              <label for="description">Beschreibung</label>
+              <textarea id="description" name="description" rows="3" placeholder="Was erwartet uns?"></textarea>
+
+              <button class="button" type="submit">Termin speichern</button>
+            </form>
+            <p class="form-hint" style="margin-top: 1rem;">
+              Hinweis: Neue Termine werden im lokalen Speicher deines Browsers abgelegt und
+              erscheinen sofort auch auf der Startseite.
+            </p>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -71,11 +93,28 @@
       <div class="container footer-grid">
         <div>
           <h3>Stammtisch Hüttenpfeife</h3>
-          <p>Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber.</p>
+          <p>
+            Gemeinschaftlicher Treffpunkt für Bergliebhaberinnen und Bergliebhaber. Wir freuen
+            uns auf deinen Besuch!
+          </p>
         </div>
         <div>
           <h3>Kontakt</h3>
           <p>E-Mail: <a href="mailto:hallo@huettenpfeife.de">hallo@huettenpfeife.de</a></p>
+          <p>Instagram: <a href="https://instagram.com/huettenpfeife">@huettenpfeife</a></p>
+          <p>Telefon: <a href="tel:+498912345678">+49 89 123 456 78</a></p>
+        </div>
+        <div>
+          <h3>Bleib in Kontakt</h3>
+          <p>
+            Folge uns auf den sozialen Kanälen für aktuelle Impressionen und Geschichten rund um
+            den Stammtisch.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/huettenpfeife" aria-label="Instagram"><span>IG</span></a>
+            <a href="https://facebook.com/huettenpfeife" aria-label="Facebook"><span>FB</span></a>
+            <a href="https://youtube.com/huettenpfeife" aria-label="YouTube"><span>YT</span></a>
+          </div>
         </div>
       </div>
     </footer>
